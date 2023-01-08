@@ -6,7 +6,7 @@
 
 > elastic beanstalk url - `udacity-image-filter-dev.us-east-1.elasticbeanstalk.com`
 
-### Links for testing - uncluding kitten image `(https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg)` in the rubric
+### Links for testing
 
 <http://image-filter-dev2222222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg>
 
