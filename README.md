@@ -4,7 +4,7 @@ Image-Filter is a simple cloud application developed alongside the Udacity Cloud
 
 ## AWS Beanstalk URL
 
-> elastic beanstalk url - `udacity-image-filter-dev.us-east-1.elasticbeanstalk.com`
+> elastic beanstalk url - `http://image-filter-dev2222222.us-east-1.elasticbeanstalk.com/`
 
 ### Links for testing
 
