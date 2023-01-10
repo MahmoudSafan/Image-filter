@@ -13,29 +13,29 @@ import {filterImageFromURL, deleteLocalFiles, checkUrl} from './util/util';
   // Use the body parser middleware for post requests
   app.use(bodyParser.json());
   
-  app.get("/filteredimage", async (req,res) =>{
-    let image_url = String(req.query.image_url);
+  app.get("/filteredimage", async (request:express.Request, response: express.Response) =>{
+    let image_url = String(request.query.image_url);
     if(!image_url){
-      return res.status(400).send("image_url is required!");
+      return response.status(400).send("image_url is required!");
     }
     if(checkUrl(image_url)){
       const filterdPath = await filterImageFromURL(image_url);
 
-     return res.sendFile(filterdPath, function (err) {
+     return response.sendFile(filterdPath, function (err) {
         if (!err) {
           deleteLocalFiles(filterdPath);
         }
     }); 
       
     }else{
-      return res.status(400).send("image_url is invalid!");
+      return response.status(400).send("image_url is invalid!");
     }
   })
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
-    res.send("try GET /filteredimage?image_url={{}}")
+  app.get( "/", async ( request:express.Request, response: express.Response ) => {
+    response.send("try GET /filteredimage?image_url={{}}")
   } );
   
 
